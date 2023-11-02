@@ -43,8 +43,15 @@
             this.radioM = new System.Windows.Forms.RadioButton();
             this.radioO = new System.Windows.Forms.RadioButton();
             this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataAniversario = new System.Windows.Forms.DateTimePicker();
             this.btnCadastro = new System.Windows.Forms.Button();
+            this.tabUsuarios = new System.Windows.Forms.ListView();
+            this.txtNomeProcurado = new System.Windows.Forms.TextBox();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdRemovido = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -106,7 +113,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(117, 196);
+            this.label7.Location = new System.Drawing.Point(52, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 13);
             this.label7.TabIndex = 6;
@@ -181,30 +188,98 @@
             this.txtEndereco.Size = new System.Drawing.Size(100, 20);
             this.txtEndereco.TabIndex = 14;
             // 
-            // dateTimePicker1
+            // dataAniversario
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(232, 190);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dataAniversario.Location = new System.Drawing.Point(192, 170);
+            this.dataAniversario.Name = "dataAniversario";
+            this.dataAniversario.Size = new System.Drawing.Size(200, 20);
+            this.dataAniversario.TabIndex = 15;
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(533, 190);
+            this.btnCadastro.Location = new System.Drawing.Point(515, 170);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastro.Size = new System.Drawing.Size(179, 23);
             this.btnCadastro.TabIndex = 16;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
+            // tabUsuarios
+            // 
+            this.tabUsuarios.HideSelection = false;
+            this.tabUsuarios.Location = new System.Drawing.Point(51, 289);
+            this.tabUsuarios.Name = "tabUsuarios";
+            this.tabUsuarios.Size = new System.Drawing.Size(682, 149);
+            this.tabUsuarios.TabIndex = 17;
+            this.tabUsuarios.UseCompatibleStateImageBehavior = false;
+            // 
+            // txtNomeProcurado
+            // 
+            this.txtNomeProcurado.Location = new System.Drawing.Point(172, 264);
+            this.txtNomeProcurado.Name = "txtNomeProcurado";
+            this.txtNomeProcurado.Size = new System.Drawing.Size(122, 20);
+            this.txtNomeProcurado.TabIndex = 18;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(305, 262);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
+            this.btnPesquisar.TabIndex = 19;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(48, 267);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Informação procurada:";
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(658, 261);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 21;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(395, 266);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 13);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Id que deseja excluir:";
+            // 
+            // txtIdRemovido
+            // 
+            this.txtIdRemovido.Location = new System.Drawing.Point(515, 264);
+            this.txtIdRemovido.Name = "txtIdRemovido";
+            this.txtIdRemovido.Size = new System.Drawing.Size(122, 20);
+            this.txtIdRemovido.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIdRemovido);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.txtNomeProcurado);
+            this.Controls.Add(this.tabUsuarios);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dataAniversario);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.radioO);
             this.Controls.Add(this.radioM);
@@ -244,8 +319,15 @@
         private System.Windows.Forms.RadioButton radioM;
         private System.Windows.Forms.RadioButton radioO;
         private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dataAniversario;
         private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.ListView tabUsuarios;
+        private System.Windows.Forms.TextBox txtNomeProcurado;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIdRemovido;
     }
 }
 
